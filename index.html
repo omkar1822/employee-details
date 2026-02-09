@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Corporate Dashboard</h1>
+        <nav>
+            <a href="dashboard">Dashboard</a>
+            <a href="employee">Employees</a>
+            <a href="logout">Logout</a>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Dashboard Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Employees</h3>
+                <p id="totalEmployees">0</p>
+            </div>
+            <div class="card">
+                <h3>Total Salary</h3>
+                <p id="totalSalary">₹0</p>
+            </div>
+            <div class="card">
+                <h3>Highest Salary</h3>
+                <p id="highestSalary">₹0</p>
+            </div>
+        </div>
+        <!-- Form -->
+        <div class="card form-card">
+            <form id="employeeForm">
+                <input type="text" id="name" placeholder="Employee Name" required />
+                <input type="text" id="department" placeholder="Department" required />
+                <input type="number" id="salary" placeholder="Salary" required />
+                <button type="submit">Add Employee</button>
+            </form>
+        </div>
+        <!-- Table -->
+        <div class="card table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTable"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="employee.js"></script>
+</body>
+
+</html>
